@@ -9,7 +9,7 @@ API_KEY = "your_key"
 # 📊 기존 박스오피스 CSV 파일 읽기
 print("📂 기존 박스오피스 데이터 로딩...")
 try:
-    df_boxoffice = pd.read_csv("kobis_box_office_sorted_2019_2020.csv")
+    df_boxoffice = pd.read_csv("kobis_box_office_sorted_2019_2020.csv") # 각자의 원천 파일 경로로 변경경
     print(f"✅ 박스오피스 데이터 로딩 완료: {len(df_boxoffice)}개 레코드")
 except FileNotFoundError:
     print("❌ kobis_box_office_sorted_2019_2020.csv 파일을 찾을 수 없습니다.")
@@ -142,7 +142,7 @@ print(f"🎉 영화 상세정보 수집 완료: {len(movie_details)}개")
 df_movie_details = pd.DataFrame(movie_details)
 
 # 💾 독립적인 영화 상세정보 CSV 저장
-details_save_path = "kobis_movie_details_2019_2020.csv"
+details_save_path = "kobis_movie_details_2019_2020.csv" # 각자의 연도에 맞게 변경
 df_movie_details.to_csv(details_save_path, index=False, encoding='utf-8-sig')
 print(f"✅ 영화 상세정보 CSV 저장 완료: {details_save_path}")
 
